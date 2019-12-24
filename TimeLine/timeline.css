@@ -1,0 +1,71 @@
+.container{
+    width: 100%;
+}
+
+/********************************************************************/
+#title{
+    width: 100%;
+}
+#title h1{
+    color: green;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+/********************************************************************/
+
+.progressbar li{
+    list-style-type: none;
+    float: left;
+    width: 16.66%;
+    position: relative;
+}
+.progressbar li:before{
+    content: '>';
+    font-size: 25px;
+    font-weight: 900;
+    color: #CCC;
+    font-family: sans-serif;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border: 5px solid #CCC;
+    display: block;
+    text-align: center;
+    margin: 10px auto 20px auto;
+    border-radius: 50%;
+    background-color: white;
+}
+.progressbar li:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: #CCC;
+    top: 27px;
+    left: -50%;
+    z-index: -1;
+}
+.progressbar li:first-child:after{
+    content: none;
+}
+.progressbar li.active:before{
+    color: green;
+    border-color: green;
+}
+.progressbar li.active + li:after{
+    background-color: green;
+}
+
+/********************************************************************/
+#button{
+    background-color: green;
+    border: none;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px 10px 10px 40px;
+    border-radius: 5%;
+    position: absolute;
+    top: 180px;
+    right: 45px;
+}
+/********************************************************************/
